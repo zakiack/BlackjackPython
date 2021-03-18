@@ -130,11 +130,11 @@ def win():
     ableToStay = False
     ableToHit = False
     playerMoney += (2*betMoney)
-    betMoney = 0
     updateFile()
     points.config(text="Money: $" + str(playerMoney))
     message.config(text="you won $"+str(betMoney)+" good job")
     betBox.config(text="Play again", command=restart)
+    betMoney = 0
 
 def dealerLoop():
     cardnum = numpy.random.randint(0,len(cards))
